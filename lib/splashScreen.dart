@@ -1,9 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:iapply/homePageScreen.dart';
-// import 'package:iapply/homeScreen.dart';
-import 'package:iapply/main.dart';
+import 'package:iapply/loginPage.dart';
+
+
 
 class SplashScreen extends StatefulWidget{
   @override
@@ -19,7 +19,7 @@ class SplashScreenState extends State<SplashScreen>{
     super.initState();
 
     Timer(Duration(seconds: 3),(){
-     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePageScreen(),));
+     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginPage(),));
     });
 
   }
@@ -27,17 +27,18 @@ class SplashScreenState extends State<SplashScreen>{
 
   Widget build(BuildContext context) {
    return Scaffold(
-     body: Container(
-       color: Theme.of(context).colorScheme.primary,
+   body: Container(
+       color: Theme.of(context).primaryColor,
        child: Center(
+         child: Container(
+           height: 250,
+           width: 250,
+           child: Center(
+               child: Image.asset('assets/images/img.png',)
 
-         child: Text('iApply', style: TextStyle(
-           fontSize: 65,
-           color: Colors.white,
-           fontWeight: FontWeight.bold
-         )),
-       ),
-     )
+           ),
+         ),
+       )),
 
    );
 
