@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iapply/ui_helper.dart';
 
 class LoginPage extends StatefulWidget{
   @override
@@ -30,12 +31,17 @@ class LoginPageState extends State<LoginPage>{
              Padding(
                padding: const EdgeInsets.all(10.0),
                child: Container(
+
                  color: Theme.of(context).canvasColor,
                  child: Form(
                    child: Padding(
-                     padding: const EdgeInsets.all(30.0),
+                     padding: const EdgeInsets.all(20.0),
                      child: Column(
                        children: [
+                         Text('Login',style: TextStyle(fontSize: 30,color: Theme.of(context).primaryColor, fontWeight: FontWeight.bold),),
+                         SizedBox(
+                           height: 20,
+                         ),
                          TextFormField(
                            controller: emailController,
                            style: TextStyle(color: Colors.black),
@@ -56,13 +62,13 @@ class LoginPageState extends State<LoginPage>{
                                ),
                                prefixIcon: Icon(Icons.email,color: Theme.of(context).primaryColor,),
                                hintText: "Enter your email.",
-                               hintStyle: TextStyle(color: Colors.grey),
+                               hintStyle: TextStyle(color: Colors.grey, fontSize: 16),
                              fillColor: Colors.white,
                              filled: true,
                            ),
                          ),
                          SizedBox(
-                           height: 25,
+                           height: 20,
                          ),
                          TextFormField(
                            controller: passwordController,
@@ -83,7 +89,7 @@ class LoginPageState extends State<LoginPage>{
                              ),
                              prefixIcon: Icon(Icons.key,color: Theme.of(context).primaryColor,),
                              hintText: "Enter your password.",
-                             hintStyle: TextStyle(color: Colors.grey),
+                             hintStyle: TextStyle(color: Colors.grey,fontSize: 16),
                              suffixIcon: IconButton(onPressed: (){},icon: Icon(Icons.remove_red_eye),),
                              suffixIconColor: Theme.of(context).primaryColor,
                              fillColor: Colors.white,
@@ -94,8 +100,14 @@ class LoginPageState extends State<LoginPage>{
                            obscuringCharacter: '*',
                          ),
                          SizedBox(
-                          height: 25,
+                          height: 10,
                         ),
+                         TextButton(onPressed: (){
+// something here
+                         }, child: Text('Forgot Password?',style: TextStyle(color: Theme.of(context).primaryColor , fontSize: 14),)),
+                         SizedBox(
+                           height: 10
+                         ),
                          Container(
                            width: 120,
                            child: ElevatedButton(onPressed: (){
@@ -114,6 +126,18 @@ class LoginPageState extends State<LoginPage>{
                                child: Text('Login',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold, fontSize: 16),),
                            ),
 
+                         ),
+                         SizedBox(
+                             height: 10
+                         ),
+                         Row(
+                           mainAxisAlignment: MainAxisAlignment.center,
+                           children: [
+                             Text("Don't Have an Account?",style: TextStyle(fontSize: 14, color: Theme.of(context).primaryColor),),
+                             TextButton(onPressed: (){
+// something here
+                             }, child: Text('Register',style: TextStyle(color: hexToColor('#40d900')),))
+                           ],
                          )
                        ],
                      ),
@@ -128,4 +152,11 @@ class LoginPageState extends State<LoginPage>{
    );
   }
 
+}
+Color hexToColor(String hexColor) {
+  hexColor = hexColor.replaceAll("#", "");
+  if (hexColor.length == 6) {
+    hexColor = "FF$hexColor"; // Add alpha value if not provided
+  }
+  return Color(int.parse("0x$hexColor"));
 }
