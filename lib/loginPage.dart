@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iapply/homePageScreen.dart';
 import 'package:iapply/signupPage.dart';
 
 
@@ -121,6 +122,7 @@ class LoginPageState extends State<LoginPage>{
                                String userPassword = passwordController.text.toString();
          
                              //some operation to be done here...
+                               Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePageScreen()));
          
                              },
                                style: ElevatedButton.styleFrom(
