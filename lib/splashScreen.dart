@@ -6,6 +6,8 @@ import 'package:iapply/loginPage.dart';
 
 
 class SplashScreen extends StatefulWidget{
+  const SplashScreen({super.key});
+
   @override
   State<StatefulWidget> createState() {
 return SplashScreenState();
@@ -30,7 +32,7 @@ class SplashScreenState extends State<SplashScreen>{
    body: Container(
        color: Theme.of(context).primaryColor,
        child: Center(
-         child: Container(
+         child: SizedBox(
            height: 250,
            width: 250,
            child: Center(

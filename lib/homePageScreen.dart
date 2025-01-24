@@ -8,203 +8,405 @@ class HomePageScreen extends StatefulWidget{
   }
 }
 class HomePageScreenState extends State<HomePageScreen>{
+  FocusNode focusNode = FocusNode();
+
+  @override
+  void dispose(){
+    focusNode.dispose();
+    super.dispose();
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     body: Container(
-       color: Theme.of(context).primaryColor,
-       child: Column(
-         children: [
-           SizedBox(
-             height: 25,
-           ),
-           Padding(
-             padding: const EdgeInsets.only(top: 30.0,bottom: 30 ,left: 25,right: 28 ),
-             child: Container(
-               child: Row(
-                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                 children: [
-                   Column(
-                     crossAxisAlignment: CrossAxisAlignment.start,
-                     children: [
-                       Text('Welcome',style: TextStyle(color: Colors.white,fontSize: 16,fontWeight: FontWeight.normal),),
-                       Text('@username',style: TextStyle(color: Colors.white,fontSize:28 ,fontWeight: FontWeight.w500),)
-                     ],
-                   ),
-                   Container(
-                       height: 45,
-                       width: 116,
-                       child: Image.asset('assets/images/img.png'))
-                 ],
-               ),
-             ),
-           ),
-           Container(
-             color: hexToColor("7E6BA3"),
-             child: Padding(
-               padding: const EdgeInsets.only(left:25,right: 25,bottom: 10,top: 10 ),
-               child: SizedBox(
-                 // width: 330,
-                 child: TextField(
-                   decoration: InputDecoration(
-                     // contentPadding: EdgeInsets.symmetric(vertical: 10),
-                     enabledBorder: OutlineInputBorder(
-                       borderSide: BorderSide(
-                         color: Colors.grey,
-                         width: 2
-                       ),
-                       borderRadius: BorderRadius.circular(27),
-                     ),
-                     focusedBorder: OutlineInputBorder(
-                       borderRadius: BorderRadius.circular(27),
-                       borderSide: BorderSide(color: Theme.of(context).primaryColor,
-                       width: 2)
-                     ),
-                     hintText: "Search",
-                     hintStyle: TextStyle(color: Colors.grey,fontSize: 16),
-                     fillColor: Colors.white,
-                     filled: true,
-                     suffixIcon: IconButton(onPressed: (){
-                     }, icon: Icon(Icons.search))
-                   ),
-                 ),
-               ),
-             ),
-           ),
-           Container(
+     body: InkWell(
+       onTap: (){
+         FocusScope.of(context).requestFocus(FocusNode());
+       },
+       child: Container(
+         color: Theme.of(context).primaryColor,
+         child: SafeArea(
+           child: SingleChildScrollView(
              child: Column(
                children: [
-                Container(height: 20,
-                color: Theme.of(context).canvasColor,),
-                 Container(
-                   color: Colors.white,
-                   child: Padding(
-                     padding: const EdgeInsets.only(left: 25,right: 10),
-                     child: Row(
-                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                       children: [
-                         Text('Top Consultancies',style: TextStyle(color: Theme.of(context).primaryColor,fontSize: 18,fontWeight: FontWeight.w500),),
-                         TextButton(onPressed: (){
-                           // something
-                         }, child: Text('More',style:TextStyle(color: hexToColor('40D900')) ,))
-                       ],
-                     ),
+                 Padding(
+                   padding: const EdgeInsets.only(top: 30.0,bottom: 30 ,left: 25,right: 28 ),
+                   child: Row(
+                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                     children: [
+                       Column(
+                         crossAxisAlignment: CrossAxisAlignment.start,
+                         children: [
+                           Text('Welcome',style: TextStyle(color: Colors.white,fontSize: 16,fontWeight: FontWeight.normal),),
+                           Text('@username',style: TextStyle(color: Colors.white,fontSize:28 ,fontWeight: FontWeight.w500),)
+                         ],
+                       ),
+                       SizedBox(
+                           height: 45,
+                           width: 116,
+                           child: Image.asset('assets/images/img.png'))
+                     ],
                    ),
                  ),
-                 Padding(
-                   padding: const EdgeInsets.all(15.0),
-                   child: Container(
-                     child: SingleChildScrollView(
-                       scrollDirection: Axis.horizontal,
-                       child: Row(
-                         children: [
-                           Padding(
-                             padding: const EdgeInsets.all(10.0),
-                             child: Container(
-                               width: 90,
-                               child: Column(
-                                 crossAxisAlignment: CrossAxisAlignment.start,
-                                 children: [
-                                   Container(
-                                     height: 90,
-                                     width: 90,
-                                     decoration: BoxDecoration(
-                                         borderRadius: BorderRadius.circular(16),
-                                         color: Colors.white
-                                     ),
-                                   ),
-                                   Padding(
-                                     padding: const EdgeInsets.only(top: 8.0),
-                                     child: Text('Consultancy jbkjbjhkhkjhgjalsfkal',style: TextStyle(color: Colors.white),),
-                                   ),
-                                 ],
-                               ),
+                 Container(
+                   color: hexToColor("7E6BA3"),
+                   child: Padding(
+                     padding: const EdgeInsets.only(left:25,right: 25,bottom: 10,top: 10 ),
+                     child: SizedBox(
+                       child: TextFormField(
+                         decoration: InputDecoration(
+                           // contentPadding: EdgeInsets.symmetric(vertical: 10),
+                           enabledBorder: OutlineInputBorder(
+                             borderSide: BorderSide(
+                               color: Colors.white,
+                               width: 3
                              ),
+                             borderRadius: BorderRadius.circular(27),
                            ),
-                           Padding(
-                             padding: const EdgeInsets.all(10.0),
-                             child: Container(
-                               width: 90,
-                               child: Column(
-                                 crossAxisAlignment: CrossAxisAlignment.start,
-                                 children: [
-                                   Container(
-                                     height: 90,
-                                     width: 90,
-                                     decoration: BoxDecoration(
-                                         borderRadius: BorderRadius.circular(16),
-                                         color: Colors.white
-                                     ),
-                                   ),
-                                   Padding(
-                                     padding: const EdgeInsets.only(top: 8.0),
-                                     child: Text('Consultancy jbkjbjhkhkjhgjalsfkal',style: TextStyle(color: Colors.white),),
-                                   ),
-                                 ],
-                               ),
-                             ),
+                           focusedBorder: OutlineInputBorder(
+                             borderRadius: BorderRadius.circular(27),
+                             borderSide: BorderSide(color: Theme.of(context).primaryColor,
+                               width: 1
+                             )
                            ),
-                           Padding(
-                             padding: const EdgeInsets.all(10.0),
-                             child: Container(
-                               width: 90,
-                               child: Column(
-                                 crossAxisAlignment: CrossAxisAlignment.start,
-                                 children: [
-                                   Container(
-                                     height: 90,
-                                     width: 90,
-                                     decoration: BoxDecoration(
-                                         borderRadius: BorderRadius.circular(16),
-                                         color: Colors.white
-                                     ),
-                                   ),
-                                   Padding(
-                                     padding: const EdgeInsets.only(top: 8.0),
-                                     child: Text('Consultancy jbkjbjhkhkjhgjalsfkal',style: TextStyle(color: Colors.white),),
-                                   ),
-                                 ],
-                               ),
-                             ),
-                           ),
-                           Padding(
-                             padding: const EdgeInsets.all(10.0),
-                             child: Container(
-                               width: 90,
-                               child: Column(
-                                 crossAxisAlignment: CrossAxisAlignment.start,
-                                 children: [
-                                   Container(
-                                     height: 90,
-                                     width: 90,
-                                     decoration: BoxDecoration(
-                                         borderRadius: BorderRadius.circular(16),
-                                         color: Colors.white
-                                     ),
-                                   ),
-                                   Padding(
-                                     padding: const EdgeInsets.only(top: 8.0),
-                                     child: Text('Consultancy jbkjbjhkhkjhgjalsfkal',style: TextStyle(color: Colors.white),),
-                                   ),
-                                 ],
-                               ),
-                             ),
-                           ),
-
-
-
-
-
-                         ],
+                           hintText: "Search",
+                           hintStyle: TextStyle(color: Colors.grey,fontSize: 16,),
+                           fillColor: Colors.white,
+                           filled: true,
+                           suffixIcon: IconButton(onPressed: (){
+                           }, icon: Icon(Icons.search)),
+                           iconColor: Theme.of(context).primaryColor
+       
+                         ),
                        ),
                      ),
                    ),
+                 ),
+                 Column(
+                   children: [
+                    Container(height: 25,
+                    color: Theme.of(context).canvasColor,),
+                     Container(
+                       color: Colors.white,
+                       child: Padding(
+                         padding: const EdgeInsets.only(left: 25,right: 10),
+                         child: Row(
+                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                           children: [
+                             Text('Top Consultancies',style: TextStyle(color: Theme.of(context).primaryColor,fontSize: 18,fontWeight: FontWeight.w500),),
+                             TextButton(onPressed: (){
+                               // something
+                             }, child: Text('More',style:TextStyle(color: hexToColor('40D900')) ,))
+                           ],
+                         ),
+                       ),
+                     ),
+                     Container(
+                         color: Theme.of(context).canvasColor,
+                       child: Padding(
+                         padding: const EdgeInsets.only(top: 20,bottom: 20),
+                         child: SingleChildScrollView(
+                           scrollDirection: Axis.horizontal,
+                           child: Row(
+                             children: [
+                               Padding(
+                                 padding: const EdgeInsets.only(right: 35.0,top: 10, bottom: 10,left: 28),
+                                 child: SizedBox(
+                                   width: 90,
+                                   child: Column(
+                                     crossAxisAlignment: CrossAxisAlignment.start,
+                                     children: [
+                                       Container(
+                                         height: 90,
+                                         width: 90,
+                                         decoration: BoxDecoration(
+                                             borderRadius: BorderRadius.circular(16),
+                                             color: Colors.blueAccent
+                                         ),
+                                       ),
+                                       Padding(
+                                         padding: const EdgeInsets.only(top: 8.0),
+                                         child: Text('Consultancy jbkjbjhkhkjhgjalsfkal',style: TextStyle(color: Theme.of(context).primaryColor),),
+                                       ),
+                                     ],
+                                   ),
+                                 ),
+                               ),
+                               Padding(
+                                 padding: const EdgeInsets.only(right: 35.0,top: 10, bottom: 10),
+                                 child: SizedBox(
+                                   width: 90,
+                                   child: Column(
+                                     crossAxisAlignment: CrossAxisAlignment.start,
+                                     children: [
+                                       Container(
+                                         height: 90,
+                                         width: 90,
+                                         decoration: BoxDecoration(
+                                             borderRadius: BorderRadius.circular(16),
+                                             color: Colors.blueAccent
+                                         ),
+                                       ),
+                                       Padding(
+                                         padding: const EdgeInsets.only(top: 8.0),
+                                         child: Text('Consultancy jbkjbjhkhkjhgjalsfkal',style: TextStyle(color: Theme.of(context).primaryColor),),
+                                       ),
+                                     ],
+                                   ),
+                                 ),
+                               ),
+             
+                               Padding(
+                                 padding: const EdgeInsets.only(right: 35.0,top: 10, bottom: 10),
+                                 child: SizedBox(
+                                   width: 90,
+                                   child: Column(
+                                     crossAxisAlignment: CrossAxisAlignment.start,
+                                     children: [
+                                       Container(
+                                         height: 90,
+                                         width: 90,
+                                         decoration: BoxDecoration(
+                                             borderRadius: BorderRadius.circular(16),
+                                             color: Colors.blueAccent
+                                         ),
+                                       ),
+                                       Padding(
+                                         padding: const EdgeInsets.only(top: 8.0),
+                                         child: Text('Consultancy jbkjbjhkhkjhgjalsfkal',style: TextStyle(color: Theme.of(context).primaryColor),),
+                                       ),
+                                     ],
+                                   ),
+                                 ),
+                               ),
+             
+                               Padding(
+                                 padding: const EdgeInsets.only(right: 35.0,top: 10, bottom: 10),
+                                 child: SizedBox(
+                                   width: 90,
+                                   child: Column(
+                                     crossAxisAlignment: CrossAxisAlignment.start,
+                                     children: [
+                                       Container(
+                                         height: 90,
+                                         width: 90,
+                                         decoration: BoxDecoration(
+                                             borderRadius: BorderRadius.circular(16),
+                                             color: Colors.blueAccent
+                                         ),
+                                       ),
+                                       Padding(
+                                         padding: const EdgeInsets.only(top: 8.0),
+                                         child: Text('Consultancy jbkjbjhkhkjhgjalsfkal',style: TextStyle(color: Theme.of(context).primaryColor),),
+                                       ),
+                                     ],
+                                   ),
+                                 ),
+                               ),
+             
+                               Padding(
+                                 padding: const EdgeInsets.only(right: 35.0,top: 10, bottom: 10),
+                                 child: SizedBox(
+                                   width: 90,
+                                   child: Column(
+                                     crossAxisAlignment: CrossAxisAlignment.start,
+                                     children: [
+                                       Container(
+                                         height: 90,
+                                         width: 90,
+                                         decoration: BoxDecoration(
+                                             borderRadius: BorderRadius.circular(16),
+                                             color: Colors.blueAccent
+                                         ),
+                                       ),
+                                       Padding(
+                                         padding: const EdgeInsets.only(top: 8.0),
+                                         child: Text('Consultancy jbkjbjhkhkjhgjalsfkal',style: TextStyle(color: Theme.of(context).primaryColor),),
+                                       ),
+                                     ],
+                                   ),
+                                 ),
+                               ),
+                             ],
+                           ),
+                         ),
+                       ),
+                     )
+                 ],
+                 ),
+                 Column(
+                   children: [
+                     Container(
+                       height: 25,
+                       decoration: BoxDecoration(
+                         color: Theme.of(context).canvasColor,
+                         // border: Border(
+                         //   top: BorderSide(
+                         //     color: Theme.of(context).primaryColor ),
+                         //   bottom: BorderSide(
+                         //     color: Theme.of(context).primaryColor ),
+                         // ),
+                       ),
+                     ),
+                     Container(
+                       color: Colors.white,
+                       child: Padding(
+                         padding: const EdgeInsets.only(left: 25,right: 10),
+                         child: Row(
+                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                           children: [
+                             Text('Top Consultancies',style: TextStyle(color: Theme.of(context).primaryColor,fontSize: 18,fontWeight: FontWeight.w500),),
+                             TextButton(onPressed: (){
+                               // something
+                             }, child: Text('More',style:TextStyle(color: hexToColor('40D900')) ,))
+                           ],
+                         ),
+                       ),
+                     ),
+                     Container(
+                       color: Theme.of(context).canvasColor,
+                       child: Padding(
+                         padding: const EdgeInsets.only(top: 20,bottom: 20),
+                         child: SingleChildScrollView(
+                           scrollDirection: Axis.horizontal,
+                           child: Row(
+                             children: [
+                               Padding(
+                                 padding: const EdgeInsets.only(right: 35.0,top: 10, bottom: 10,left: 28),
+                                 child: SizedBox(
+                                   width: 90,
+                                   child: Column(
+                                     crossAxisAlignment: CrossAxisAlignment.start,
+                                     children: [
+                                       Container(
+                                         height: 90,
+                                         width: 90,
+                                         decoration: BoxDecoration(
+                                             borderRadius: BorderRadius.circular(16),
+                                             color: Colors.blueAccent
+                                         ),
+                                       ),
+                                       Padding(
+                                         padding: const EdgeInsets.only(top: 8.0),
+                                         child: Text('Consultancy jbkjbjhkhkjhgjalsfkal',style: TextStyle(color: Theme.of(context).primaryColor),),
+                                       ),
+                                     ],
+                                   ),
+                                 ),
+                               ),
+                               Padding(
+                                 padding: const EdgeInsets.only(right: 35.0,top: 10, bottom: 10),
+                                 child: SizedBox(
+                                   width: 90,
+                                   child: Column(
+                                     crossAxisAlignment: CrossAxisAlignment.start,
+                                     children: [
+                                       Container(
+                                         height: 90,
+                                         width: 90,
+                                         decoration: BoxDecoration(
+                                             borderRadius: BorderRadius.circular(16),
+                                             color: Colors.blueAccent
+                                         ),
+                                       ),
+                                       Padding(
+                                         padding: const EdgeInsets.only(top: 8.0),
+                                         child: Text('Consultancy jbkjbjhkhkjhgjalsfkal',style: TextStyle(color: Theme.of(context).primaryColor),),
+                                       ),
+                                     ],
+                                   ),
+                                 ),
+                               ),
+             
+                               Padding(
+                                 padding: const EdgeInsets.only(right: 35.0,top: 10, bottom: 10),
+                                 child: SizedBox(
+                                   width: 90,
+                                   child: Column(
+                                     crossAxisAlignment: CrossAxisAlignment.start,
+                                     children: [
+                                       Container(
+                                         height: 90,
+                                         width: 90,
+                                         decoration: BoxDecoration(
+                                             borderRadius: BorderRadius.circular(16),
+                                             color: Colors.blueAccent
+                                         ),
+                                       ),
+                                       Padding(
+                                         padding: const EdgeInsets.only(top: 8.0),
+                                         child: Text('Consultancy jbkjbjhkhkjhgjalsfkal',style: TextStyle(color: Theme.of(context).primaryColor),),
+                                       ),
+                                     ],
+                                   ),
+                                 ),
+                               ),
+             
+                               Padding(
+                                 padding: const EdgeInsets.only(right: 35.0,top: 10, bottom: 10),
+                                 child: SizedBox(
+                                   width: 90,
+                                   child: Column(
+                                     crossAxisAlignment: CrossAxisAlignment.start,
+                                     children: [
+                                       Container(
+                                         height: 90,
+                                         width: 90,
+                                         decoration: BoxDecoration(
+                                             borderRadius: BorderRadius.circular(16),
+                                             color: Colors.blueAccent
+                                         ),
+                                       ),
+                                       Padding(
+                                         padding: const EdgeInsets.only(top: 8.0),
+                                         child: Text('Consultancy jbkjbjhkhkjhgjalsfkal',style: TextStyle(color: Theme.of(context).primaryColor),),
+                                       ),
+                                     ],
+                                   ),
+                                 ),
+                               ),
+             
+                               Padding(
+                                 padding: const EdgeInsets.only(right: 35.0,top: 10, bottom: 10),
+                                 child: SizedBox(
+                                   width: 90,
+                                   child: Column(
+                                     crossAxisAlignment: CrossAxisAlignment.start,
+                                     children: [
+                                       Container(
+                                         height: 90,
+                                         width: 90,
+                                         decoration: BoxDecoration(
+                                             borderRadius: BorderRadius.circular(16),
+                                             color: Colors.blueAccent
+                                         ),
+                                       ),
+                                       Padding(
+                                         padding: const EdgeInsets.only(top: 8.0),
+                                         child: Text('Consultancy jbkjbjhkhkjhgjalsfkal',style: TextStyle(color: Theme.of(context).primaryColor),),
+                                       ),
+                                     ],
+                                   ),
+                                 ),
+                               ),
+                             ],
+                           ),
+                         ),
+                       ),
+                     )
+                   ],
+                 ),
+                 Container(
+                     // height: MediaQuery.of(context).size.height,
+                   decoration: BoxDecoration(
+                     color: Theme.of(context).canvasColor,
+                   ),
                  )
-             ],
+               ],
              ),
            ),
-           // SizedBox()
-         ],
+         ),
        ),
      ),
     );
