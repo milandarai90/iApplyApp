@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iapply/loginPage.dart';
 
 class HomePageScreen extends StatefulWidget{
   const HomePageScreen({super.key});
@@ -8,14 +9,17 @@ class HomePageScreen extends StatefulWidget{
   }
 }
 class HomePageScreenState extends State<HomePageScreen>{
+  int myIndex =0;
   FocusNode focusNode = FocusNode();
-
+  // List<Widget>WidgetList = const[
+  //   HomePageScreen(),
+  //   LoginPage(),
+  // ];
   @override
   void dispose(){
     focusNode.dispose();
     super.dispose();
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -77,7 +81,7 @@ class HomePageScreenState extends State<HomePageScreen>{
                            suffixIcon: IconButton(onPressed: (){
                            }, icon: Icon(Icons.search)),
                            iconColor: Theme.of(context).primaryColor
-       
+
                          ),
                        ),
                      ),
@@ -104,14 +108,15 @@ class HomePageScreenState extends State<HomePageScreen>{
                      ),
                      Container(
                          color: Theme.of(context).canvasColor,
+                       width: double.infinity,
                        child: Padding(
-                         padding: const EdgeInsets.only(top: 20,bottom: 20),
+                         padding: const EdgeInsets.only(top: 20,bottom: 18),
                          child: SingleChildScrollView(
                            scrollDirection: Axis.horizontal,
                            child: Row(
                              children: [
                                Padding(
-                                 padding: const EdgeInsets.only(right: 35.0,top: 10, bottom: 10,left: 28),
+                                 padding: const EdgeInsets.only(right: 8,top: 10, bottom: 10,left: 28),
                                  child: SizedBox(
                                    width: 90,
                                    child: Column(
@@ -125,16 +130,21 @@ class HomePageScreenState extends State<HomePageScreen>{
                                              color: Colors.blueAccent
                                          ),
                                        ),
-                                       Padding(
-                                         padding: const EdgeInsets.only(top: 8.0),
-                                         child: Text('Consultancy jbkjbjhkhkjhgjalsfkal',style: TextStyle(color: Theme.of(context).primaryColor),),
+                                       const SizedBox(height: 15),
+                                       SizedBox(
+                                         child: Align(
+                                           alignment: Alignment.center,
+                                           child: Text('Consultancy Name',style: TextStyle(color: Theme.of(context).primaryColor,),
+                                             overflow: TextOverflow.ellipsis,
+                                           ),
+                                         ),
                                        ),
                                      ],
                                    ),
                                  ),
                                ),
                                Padding(
-                                 padding: const EdgeInsets.only(right: 35.0,top: 10, bottom: 10),
+                                 padding: const EdgeInsets.only(right: 8,top: 10, bottom: 10,left: 28),
                                  child: SizedBox(
                                    width: 90,
                                    child: Column(
@@ -148,17 +158,22 @@ class HomePageScreenState extends State<HomePageScreen>{
                                              color: Colors.blueAccent
                                          ),
                                        ),
-                                       Padding(
-                                         padding: const EdgeInsets.only(top: 8.0),
-                                         child: Text('Consultancy jbkjbjhkhkjhgjalsfkal',style: TextStyle(color: Theme.of(context).primaryColor),),
+                                       const SizedBox(height: 15),
+                                       SizedBox(
+                                         // height:20,
+                                         child: Align(
+                                           alignment: Alignment.center,
+                                           child: Text('Consultancy Name',style: TextStyle(color: Theme.of(context).primaryColor,),
+                                             overflow: TextOverflow.ellipsis,
+                                           ),
+                                         ),
                                        ),
                                      ],
                                    ),
                                  ),
                                ),
-             
                                Padding(
-                                 padding: const EdgeInsets.only(right: 35.0,top: 10, bottom: 10),
+                                 padding: const EdgeInsets.only(right: 8,top: 10, bottom: 10,left: 28),
                                  child: SizedBox(
                                    width: 90,
                                    child: Column(
@@ -172,17 +187,22 @@ class HomePageScreenState extends State<HomePageScreen>{
                                              color: Colors.blueAccent
                                          ),
                                        ),
-                                       Padding(
-                                         padding: const EdgeInsets.only(top: 8.0),
-                                         child: Text('Consultancy jbkjbjhkhkjhgjalsfkal',style: TextStyle(color: Theme.of(context).primaryColor),),
+                                       const SizedBox(height: 15),
+                                       SizedBox(
+                                         // height:20,
+                                         child: Align(
+                                           alignment: Alignment.center,
+                                           child: Text('Consultancy Name',style: TextStyle(color: Theme.of(context).primaryColor,),
+                                             overflow: TextOverflow.ellipsis,
+                                           ),
+                                         ),
                                        ),
                                      ],
                                    ),
                                  ),
                                ),
-             
                                Padding(
-                                 padding: const EdgeInsets.only(right: 35.0,top: 10, bottom: 10),
+                                 padding: const EdgeInsets.only(right: 8,top: 10, bottom: 10,left: 28),
                                  child: SizedBox(
                                    width: 90,
                                    child: Column(
@@ -196,33 +216,15 @@ class HomePageScreenState extends State<HomePageScreen>{
                                              color: Colors.blueAccent
                                          ),
                                        ),
-                                       Padding(
-                                         padding: const EdgeInsets.only(top: 8.0),
-                                         child: Text('Consultancy jbkjbjhkhkjhgjalsfkal',style: TextStyle(color: Theme.of(context).primaryColor),),
-                                       ),
-                                     ],
-                                   ),
-                                 ),
-                               ),
-             
-                               Padding(
-                                 padding: const EdgeInsets.only(right: 35.0,top: 10, bottom: 10),
-                                 child: SizedBox(
-                                   width: 90,
-                                   child: Column(
-                                     crossAxisAlignment: CrossAxisAlignment.start,
-                                     children: [
-                                       Container(
-                                         height: 90,
-                                         width: 90,
-                                         decoration: BoxDecoration(
-                                             borderRadius: BorderRadius.circular(16),
-                                             color: Colors.blueAccent
+                                       const SizedBox(height: 15),
+                                       SizedBox(
+                                         // height:20,
+                                         child: Align(
+                                           alignment: Alignment.center,
+                                           child: Text('Consultancy Name',style: TextStyle(color: Theme.of(context).primaryColor,),
+                                             overflow: TextOverflow.ellipsis,
+                                           ),
                                          ),
-                                       ),
-                                       Padding(
-                                         padding: const EdgeInsets.only(top: 8.0),
-                                         child: Text('Consultancy jbkjbjhkhkjhgjalsfkal',style: TextStyle(color: Theme.of(context).primaryColor),),
                                        ),
                                      ],
                                    ),
@@ -238,17 +240,7 @@ class HomePageScreenState extends State<HomePageScreen>{
                  Column(
                    children: [
                      Container(
-                       height: 25,
-                       decoration: BoxDecoration(
-                         color: Theme.of(context).canvasColor,
-                         // border: Border(
-                         //   top: BorderSide(
-                         //     color: Theme.of(context).primaryColor ),
-                         //   bottom: BorderSide(
-                         //     color: Theme.of(context).primaryColor ),
-                         // ),
-                       ),
-                     ),
+                       color: Theme.of(context).canvasColor,),
                      Container(
                        color: Colors.white,
                        child: Padding(
@@ -256,7 +248,7 @@ class HomePageScreenState extends State<HomePageScreen>{
                          child: Row(
                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                            children: [
-                             Text('Top Consultancies',style: TextStyle(color: Theme.of(context).primaryColor,fontSize: 18,fontWeight: FontWeight.w500),),
+                             Text('Countries',style: TextStyle(color: Theme.of(context).primaryColor,fontSize: 18,fontWeight: FontWeight.w500),),
                              TextButton(onPressed: (){
                                // something
                              }, child: Text('More',style:TextStyle(color: hexToColor('40D900')) ,))
@@ -266,14 +258,15 @@ class HomePageScreenState extends State<HomePageScreen>{
                      ),
                      Container(
                        color: Theme.of(context).canvasColor,
+                       width: double.infinity,
                        child: Padding(
-                         padding: const EdgeInsets.only(top: 20,bottom: 20),
+                         padding: const EdgeInsets.only(top: 20,bottom: 18),
                          child: SingleChildScrollView(
                            scrollDirection: Axis.horizontal,
                            child: Row(
                              children: [
                                Padding(
-                                 padding: const EdgeInsets.only(right: 35.0,top: 10, bottom: 10,left: 28),
+                                 padding: const EdgeInsets.only(right: 8,top: 10, bottom: 10,left: 28),
                                  child: SizedBox(
                                    width: 90,
                                    child: Column(
@@ -287,16 +280,22 @@ class HomePageScreenState extends State<HomePageScreen>{
                                              color: Colors.blueAccent
                                          ),
                                        ),
-                                       Padding(
-                                         padding: const EdgeInsets.only(top: 8.0),
-                                         child: Text('Consultancy jbkjbjhkhkjhgjalsfkal',style: TextStyle(color: Theme.of(context).primaryColor),),
+                                       const SizedBox(height: 15),
+                                       SizedBox(
+                                         // height:20,
+                                         child: Align(
+                                           alignment: Alignment.center,
+                                           child: Text('Consultancy Name',style: TextStyle(color: Theme.of(context).primaryColor,),
+                                             overflow: TextOverflow.ellipsis,
+                                           ),
+                                         ),
                                        ),
                                      ],
                                    ),
                                  ),
                                ),
                                Padding(
-                                 padding: const EdgeInsets.only(right: 35.0,top: 10, bottom: 10),
+                                 padding: const EdgeInsets.only(right: 8,top: 10, bottom: 10,left: 28),
                                  child: SizedBox(
                                    width: 90,
                                    child: Column(
@@ -310,17 +309,22 @@ class HomePageScreenState extends State<HomePageScreen>{
                                              color: Colors.blueAccent
                                          ),
                                        ),
-                                       Padding(
-                                         padding: const EdgeInsets.only(top: 8.0),
-                                         child: Text('Consultancy jbkjbjhkhkjhgjalsfkal',style: TextStyle(color: Theme.of(context).primaryColor),),
+                                       const SizedBox(height: 15),
+                                       SizedBox(
+                                         // height:20,
+                                         child: Align(
+                                           alignment: Alignment.center,
+                                           child: Text('Consultancy Name',style: TextStyle(color: Theme.of(context).primaryColor,),
+                                             overflow: TextOverflow.ellipsis,
+                                           ),
+                                         ),
                                        ),
                                      ],
                                    ),
                                  ),
                                ),
-             
                                Padding(
-                                 padding: const EdgeInsets.only(right: 35.0,top: 10, bottom: 10),
+                                 padding: const EdgeInsets.only(right: 8,top: 10, bottom: 10,left: 28),
                                  child: SizedBox(
                                    width: 90,
                                    child: Column(
@@ -334,17 +338,22 @@ class HomePageScreenState extends State<HomePageScreen>{
                                              color: Colors.blueAccent
                                          ),
                                        ),
-                                       Padding(
-                                         padding: const EdgeInsets.only(top: 8.0),
-                                         child: Text('Consultancy jbkjbjhkhkjhgjalsfkal',style: TextStyle(color: Theme.of(context).primaryColor),),
+                                       const SizedBox(height: 15),
+                                       SizedBox(
+                                         // height:20,
+                                         child: Align(
+                                           alignment: Alignment.center,
+                                           child: Text('Consultancy Name',style: TextStyle(color: Theme.of(context).primaryColor,),
+                                             overflow: TextOverflow.ellipsis,
+                                           ),
+                                         ),
                                        ),
                                      ],
                                    ),
                                  ),
                                ),
-             
                                Padding(
-                                 padding: const EdgeInsets.only(right: 35.0,top: 10, bottom: 10),
+                                 padding: const EdgeInsets.only(right: 8,top: 10, bottom: 10,left: 28),
                                  child: SizedBox(
                                    width: 90,
                                    child: Column(
@@ -358,33 +367,15 @@ class HomePageScreenState extends State<HomePageScreen>{
                                              color: Colors.blueAccent
                                          ),
                                        ),
-                                       Padding(
-                                         padding: const EdgeInsets.only(top: 8.0),
-                                         child: Text('Consultancy jbkjbjhkhkjhgjalsfkal',style: TextStyle(color: Theme.of(context).primaryColor),),
-                                       ),
-                                     ],
-                                   ),
-                                 ),
-                               ),
-             
-                               Padding(
-                                 padding: const EdgeInsets.only(right: 35.0,top: 10, bottom: 10),
-                                 child: SizedBox(
-                                   width: 90,
-                                   child: Column(
-                                     crossAxisAlignment: CrossAxisAlignment.start,
-                                     children: [
-                                       Container(
-                                         height: 90,
-                                         width: 90,
-                                         decoration: BoxDecoration(
-                                             borderRadius: BorderRadius.circular(16),
-                                             color: Colors.blueAccent
+                                       const SizedBox(height: 15),
+                                       SizedBox(
+                                         // height:20,
+                                         child: Align(
+                                           alignment: Alignment.center,
+                                           child: Text('Consultancy Name',style: TextStyle(color: Theme.of(context).primaryColor,),
+                                             overflow: TextOverflow.ellipsis,
+                                           ),
                                          ),
-                                       ),
-                                       Padding(
-                                         padding: const EdgeInsets.only(top: 8.0),
-                                         child: Text('Consultancy jbkjbjhkhkjhgjalsfkal',style: TextStyle(color: Theme.of(context).primaryColor),),
                                        ),
                                      ],
                                    ),
@@ -398,7 +389,6 @@ class HomePageScreenState extends State<HomePageScreen>{
                    ],
                  ),
                  Container(
-                     // height: MediaQuery.of(context).size.height,
                    decoration: BoxDecoration(
                      color: Theme.of(context).canvasColor,
                    ),

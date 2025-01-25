@@ -40,114 +40,54 @@ body: InkWell(
                 ),
                 Padding(
                   padding: const EdgeInsets.all(10.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: Theme.of(context).canvasColor,
-                        borderRadius: BorderRadius.circular(10)
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: Form(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text('Sign Up',style: TextStyle(color: Theme.of(context).primaryColor, fontSize: 30, fontWeight: FontWeight.w800),),
-                            SizedBox(
-                              height: 20,
-                            ),
-  
-                            TextFormField(
-                              decoration: InputDecoration(
-                                enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10),
-                                  borderSide: BorderSide(
-                                    color: Colors.white,
-                                  )
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                      color: Theme.of(context).primaryColor,
-                                    width: 2
+                  child: Card(
+                    elevation: 20,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          color: Theme.of(context).canvasColor,
+                          borderRadius: BorderRadius.circular(10)
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: Form(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text('Sign Up',style: TextStyle(color: Theme.of(context).primaryColor, fontSize: 30, fontWeight: FontWeight.w800),),
+                              SizedBox(
+                                height: 20,
+                              ),
+
+                              TextFormField(
+                                decoration: InputDecoration(
+                                  enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                    borderSide: BorderSide(
+                                      color: Colors.white,
+                                    )
                                   ),
-                                  borderRadius: BorderRadius.circular(10)
-                                ),
-                                hintText: "Full Name",
-                                hintStyle: TextStyle(
-                                  color: Colors.grey,
-                                ),
-                                fillColor: Colors.white,
-                                filled: true,
-                                prefixIcon: Icon(Icons.person),
-                                prefixIconColor: Theme.of(context).primaryColor,
-                              ),
-                            ),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            TextFormField(
-                              decoration: InputDecoration(
-                                enabledBorder: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(10),
-                                    borderSide: BorderSide(
-                                      color: Colors.white,
-                                    )
-                                ),
-                                focusedBorder: OutlineInputBorder(
+                                  focusedBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                         color: Theme.of(context).primaryColor,
-                                        width: 2
+                                      width: 2
                                     ),
                                     borderRadius: BorderRadius.circular(10)
+                                  ),
+                                  hintText: "Full Name",
+                                  hintStyle: TextStyle(
+                                    color: Colors.grey,
+                                  ),
+                                  fillColor: Colors.white,
+                                  filled: true,
+                                  prefixIcon: Icon(Icons.person),
+                                  prefixIconColor: Theme.of(context).primaryColor,
                                 ),
-                                hintText: "Email",
-                                hintStyle: TextStyle(
-                                  color: Colors.grey,
-                                ),
-                                fillColor: Colors.white,
-                                filled: true,
-                                prefixIcon: Icon(Icons.email),
-                                prefixIconColor: Theme.of(context).primaryColor,
                               ),
-                            ),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            TextFormField(
-                              decoration: InputDecoration(
-                                enabledBorder: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(10),
-                                    borderSide: BorderSide(
-                                      color: Colors.white,
-                                    )
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                        color: Theme.of(context).primaryColor,
-                                        width: 2
-                                    ),
-                                    borderRadius: BorderRadius.circular(10)
-                                ),
-                                hintText: "Password",
-                                hintStyle: TextStyle(
-                                  color: Colors.grey,
-                                ),
-                                fillColor: Colors.white,
-                                filled: true,
-                                prefixIcon: Icon(Icons.lock),
-                                prefixIconColor: Theme.of(context).primaryColor,
-                                suffixIcon: IconButton(onPressed: (){
-                                  // something
-                                }, icon: Icon(Icons.remove_red_eye)),
-                                suffixIconColor: Theme.of(context).primaryColor,
+                              SizedBox(
+                                height: 20,
                               ),
-                              obscureText: true,
-                              obscuringCharacter: '*',
-                            ),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            TextFormField(
-                              decoration: InputDecoration(
+                              TextFormField(
+                                decoration: InputDecoration(
                                   enabledBorder: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(10),
                                       borderSide: BorderSide(
@@ -161,52 +101,115 @@ body: InkWell(
                                       ),
                                       borderRadius: BorderRadius.circular(10)
                                   ),
-                                  hintText: "Confirm Password",
+                                  hintText: "Email",
                                   hintStyle: TextStyle(
                                     color: Colors.grey,
                                   ),
                                   fillColor: Colors.white,
                                   filled: true,
-                                  prefixIcon: Icon(Icons.lock_open),
+                                  prefixIcon: Icon(Icons.email),
+                                  prefixIconColor: Theme.of(context).primaryColor,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              TextFormField(
+                                decoration: InputDecoration(
+                                  enabledBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                      borderSide: BorderSide(
+                                        color: Colors.white,
+                                      )
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                          color: Theme.of(context).primaryColor,
+                                          width: 2
+                                      ),
+                                      borderRadius: BorderRadius.circular(10)
+                                  ),
+                                  hintText: "Password",
+                                  hintStyle: TextStyle(
+                                    color: Colors.grey,
+                                  ),
+                                  fillColor: Colors.white,
+                                  filled: true,
+                                  prefixIcon: Icon(Icons.lock),
                                   prefixIconColor: Theme.of(context).primaryColor,
                                   suffixIcon: IconButton(onPressed: (){
+                                    // something
                                   }, icon: Icon(Icons.remove_red_eye)),
-                                  suffixIconColor: Theme.of(context).primaryColor
+                                  suffixIconColor: Theme.of(context).primaryColor,
+                                ),
+                                obscureText: true,
+                                obscuringCharacter: '*',
                               ),
-                              obscureText: true,
-                              obscuringCharacter: '*',
-                            ),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            SizedBox(
-                              width: 120,
-                              child: ElevatedButton(onPressed: (){
-  
-                              // something to be done
-  
-                              },
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Theme.of(context).primaryColor,
-                                foregroundColor: Colors.white,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10)
-                                )
-                              ), child: Text('SIGN UP'),),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text('Already have an account?'),
-                                TextButton(onPressed: (){
-                                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>LoginPage()));
-                                }, child: Text('Sign in',style: TextStyle(color: hexToColor("#40d900",)),))
-                              ],
-                            )
-                          ],
+                              SizedBox(
+                                height: 20,
+                              ),
+                              TextFormField(
+                                decoration: InputDecoration(
+                                    enabledBorder: OutlineInputBorder(
+                                        borderRadius: BorderRadius.circular(10),
+                                        borderSide: BorderSide(
+                                          color: Colors.white,
+                                        )
+                                    ),
+                                    focusedBorder: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                            color: Theme.of(context).primaryColor,
+                                            width: 2
+                                        ),
+                                        borderRadius: BorderRadius.circular(10)
+                                    ),
+                                    hintText: "Confirm Password",
+                                    hintStyle: TextStyle(
+                                      color: Colors.grey,
+                                    ),
+                                    fillColor: Colors.white,
+                                    filled: true,
+                                    prefixIcon: Icon(Icons.lock_open),
+                                    prefixIconColor: Theme.of(context).primaryColor,
+                                    suffixIcon: IconButton(onPressed: (){
+                                    }, icon: Icon(Icons.remove_red_eye)),
+                                    suffixIconColor: Theme.of(context).primaryColor
+                                ),
+                                obscureText: true,
+                                obscuringCharacter: '*',
+                              ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              SizedBox(
+                                width: 120,
+                                child: ElevatedButton(onPressed: (){
+
+                                // something to be done
+
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Theme.of(context).primaryColor,
+                                  foregroundColor: Colors.white,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10)
+                                  )
+                                ), child: Text('SIGN UP'),),
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text('Already have an account?'),
+                                  TextButton(onPressed: (){
+                                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>LoginPage()));
+                                  }, child: Text('Sign in',style: TextStyle(color: hexToColor("#40d900",)),))
+                                ],
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),
