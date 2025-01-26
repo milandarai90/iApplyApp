@@ -15,8 +15,21 @@ class myClassPageState extends State<MyClassesPage>{
   Widget build(BuildContext context) {
    return Scaffold(
      appBar: AppBar(
-       title: Text("My Classes"),
+       backgroundColor: Theme.of(context).primaryColor,
+       title: Text("My Classes",style:TextStyle(fontWeight: FontWeight.w500,color: Theme.of(context).canvasColor,fontSize: 22),
      ),
+     ),
+       body: Container(
+   color: Theme.of(context).canvasColor,
+    child: Center(
+    child: Column(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+    Text('Coming Soon...',style:TextStyle(color:  Theme.of(context).primaryColor, fontSize: 18))
+    ],
+    ),
+    ),
+    )
    );
   }
 }

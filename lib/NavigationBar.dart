@@ -4,7 +4,7 @@ import 'package:iapply/myClasses.dart';
 import 'package:iapply/notifications.dart';
 
 import 'homePageScreen.dart';
-import 'loginPage.dart';
+
 
 class NavigationBarPage extends StatefulWidget{
   const NavigationBarPage({super.key});
@@ -47,7 +47,6 @@ class NavigationBarPageState extends State<NavigationBarPage>{
             backgroundColor: Theme.of(context).primaryColor,
             type: BottomNavigationBarType.fixed,
             showUnselectedLabels: false,
-            // elevation: 10,
             iconSize: 32,
             selectedFontSize: 18,
             selectedItemColor: hexToColor("40D900"),

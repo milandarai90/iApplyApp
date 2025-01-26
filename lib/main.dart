@@ -16,6 +16,29 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Demo',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: hexToColor('#523a81')),
+          primaryTextTheme: TextTheme(
+              titleLarge:TextStyle(
+              fontSize: 22,
+                color: Theme.of(context).canvasColor,
+                fontWeight: FontWeight.w500
+            ),
+              titleMedium:TextStyle(
+                fontSize: 18,
+                color: Theme.of(context).primaryColor,
+              ),
+            bodyLarge:TextStyle(
+              fontSize: 16,
+              color: Theme.of(context).primaryColor,
+            ),
+            labelLarge: TextStyle(
+                color: Theme.of(context).canvasColor,fontWeight: FontWeight.bold, fontSize: 16
+            ),
+            labelSmall : TextStyle(
+              fontSize: 14,
+              color: hexToColor('40d900')
+            )
+          ),
+
           useMaterial3: true,
         ),
         home: SplashScreen()

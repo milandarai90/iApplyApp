@@ -147,7 +147,7 @@ class LoginPageState extends State<LoginPage>{
                                          borderRadius: BorderRadius.circular(10)
                                        )
                                      ),
-                                       child: Text('LOGIN',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold, fontSize: 16),),
+                                       child: Text('LOGIN',style: TextStyle(color: Theme.of(context).canvasColor,fontWeight: FontWeight.bold, fontSize: 16),),
                                    ),
                                 
                                  ),

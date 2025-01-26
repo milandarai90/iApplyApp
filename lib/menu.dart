@@ -14,8 +14,20 @@ class menuPageState extends State<MenuPage>{
   Widget build(BuildContext context) {
    return Scaffold(
      appBar: AppBar(
-       title: Text("Menu Page"),
+       backgroundColor: Theme.of(context).primaryColor,
+       title: Text("Menu",style: TextStyle(color: Theme.of(context).canvasColor,fontSize: 22,fontWeight: FontWeight.w500),),
      ),
+       body: Container(
+         color: Theme.of(context).canvasColor,
+         child: Center(
+           child: Column(
+             mainAxisAlignment: MainAxisAlignment.center,
+             children: [
+               Text('Coming Soon...',style:TextStyle(color:  Theme.of(context).primaryColor, fontSize: 18))
+             ],
+           ),
+         ),
+       )
    );
   }
 }
