@@ -1,0 +1,354 @@
+{
+  "consultancy_details": [
+    {
+      "id": 1,
+      "name": "The Next Consultancy",
+      "email": "TheNextConsultancy@gmail.com",
+      "phone": "9800632399",
+      "u_district": "Kathmandu",
+      "u_municipality": "New Baneshwor",
+      "u_ward": "2",
+      "photo": null,
+      "branch_details": [
+        {
+          "id": 1,
+          "name": "Bharatpur Branch",
+          "email": "Bharatpurnextbranch@gmail.com",
+          "phone": "9832823642",
+          "u_district": "Chitwan",
+          "u_municipality": "Bharatpur",
+          "u_ward": "3",
+          "photo": null,
+          "course_details": []
+        },
+        {
+          "id": 4,
+          "name": "Pokhara Branch",
+          "email": "Nextpokhara@gmail.com",
+          "phone": "9868674444",
+          "u_district": "kaski",
+          "u_municipality": "pokhara",
+          "u_ward": "3",
+          "photo": "https://iapply.techenfield.com/public/storage/profile_picture/1724856123profilePictures.jpeg",
+          "course_details": [
+            {
+              "id": 1,
+              "course_title": "IELTS",
+              "class_details": [
+                {
+                  "id": 1,
+                  "class_name": "Morning Shift A",
+                  "students_number": 3,
+                  "seat_numbers": "20",
+                  "status": "available",
+                  "start_time": "07:00",
+                  "end_time": "08:00",
+                  "start_date": "2024-09-01",
+                  "end_date": "2024-09-15"
+                },
+                {
+                  "id": 2,
+                  "class_name": "Morning Shift B",
+                  "students_number": 3,
+                  "seat_numbers": "24",
+                  "status": "available",
+                  "start_time": "07:00",
+                  "end_time": "08:00",
+                  "start_date": "2024-09-08",
+                  "end_date": "2024-09-22"
+                },
+                {
+                  "id": 3,
+                  "class_name": "Day shift A",
+                  "students_number": 3,
+                  "seat_numbers": "20",
+                  "status": "available",
+                  "start_time": "12:00",
+                  "end_time": "13:00",
+                  "start_date": "2024-06-01",
+                  "end_date": "2024-06-25"
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "course_title": "GRE",
+              "class_details": null
+            },
+            {
+              "id": 3,
+              "course_title": "PTE",
+              "class_details": [
+                {
+                  "id": 4,
+                  "class_name": "Morning Shift A",
+                  "students_number": 2,
+                  "seat_numbers": "10",
+                  "status": "available",
+                  "start_time": "06:50",
+                  "end_time": "08:50",
+                  "start_date": "2024-08-28",
+                  "end_date": "2024-09-25"
+                },
+                {
+                  "id": 5,
+                  "class_name": "Day shift A",
+                  "students_number": 2,
+                  "seat_numbers": "15",
+                  "status": "available",
+                  "start_time": "15:00",
+                  "end_time": "17:50",
+                  "start_date": "2024-08-28",
+                  "end_date": "2024-10-02"
+                }
+              ]
+            },
+            {
+              "id": 4,
+              "course_title": "SAT",
+              "class_details": null
+            }
+          ]
+        }
+      ],
+      "country_details": [
+        {
+          "country": "Australia",
+          "map": "https://iapply.techenfield.com/public/storage/consultancy/Countrylogo/1724854441consultancy_country_logo.jpg",
+          "guidelines": [
+            {
+              "process": "Research and Choose Your Course and Institution."
+            },
+            {
+              "process": "Check the Eligibility Requirements"
+            },
+            {
+              "process": "Gather the Required Documents."
+            },
+            {
+              "process": "Pay the Visa Application Fee"
+            },
+            {
+              "process": "Attend Biometrics Collection and Interview (if required)"
+            },
+            {
+              "process": "Wait for Visa Processing and Outcome"
+            },
+            {
+              "process": "After you Receive Your Visa Prepare for Departure"
+            }
+          ]
+        },
+        {
+          "country": "USA",
+          "map": "https://iapply.techenfield.com/public/storage/consultancy/Countrylogo/1724854449consultancy_country_logo.jpg",
+          "guidelines": [
+            {
+              "process": "Take the IELTS or PTE Test"
+            },
+            {
+              "process": "Choose the Type of Visa"
+            },
+            {
+              "process": "Apply to SEVP-Approved Schools"
+            },
+            {
+              "process": "Get Accepted by a SEVP-Approved School"
+            },
+            {
+              "process": "Receive Form I-20 or DS-2019"
+            },
+            {
+              "process": "Pay the SEVIS Fee"
+            },
+            {
+              "process": "Complete the DS-160 Form"
+            },
+            {
+              "process": "Pay the Visa Application Fee"
+            },
+            {
+              "process": "Schedule a Visa Interview"
+            },
+            {
+              "process": "Gather Required Documents"
+            },
+            {
+              "process": "Attend the Visa Interview"
+            },
+            {
+              "process": "Wait for Visa Processing"
+            },
+            {
+              "process": "Receive Your Visa"
+            },
+            {
+              "process": "Departure"
+            }
+          ]
+        },
+        {
+          "country": "Canada",
+          "map": "https://iapply.techenfield.com/public/storage/consultancy/Countrylogo/1737542853consultancy_country_logo.jpeg",
+          "guidelines": null
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Expert Education",
+      "email": "ExpertEducation@gmail.com",
+      "phone": "9844445533",
+      "u_district": "Kaski",
+      "u_municipality": "Pokhara",
+      "u_ward": "5",
+      "photo": null,
+      "branch_details": [
+        {
+          "id": 2,
+          "name": "Mahendranagar Branch",
+          "email": "Expertmahendranagar@gmail.com",
+          "phone": "9835274722",
+          "u_district": "Kanchanpur",
+          "u_municipality": "Mahendranagar",
+          "u_ward": "3",
+          "photo": null,
+          "course_details": []
+        }
+      ],
+      "country_details": null
+    },
+    {
+      "id": 3,
+      "name": "The Grace",
+      "email": "TheGrace@gmail.com",
+      "phone": "9866747286",
+      "u_district": "Chitwan",
+      "u_municipality": "Bharatpur",
+      "u_ward": "12",
+      "photo": null,
+      "branch_details": [
+        {
+          "id": 3,
+          "name": "Gaindakot Branch",
+          "email": "Thegracegaindakot@gmail.com",
+          "phone": "9867453333",
+          "u_district": "Nawalpur",
+          "u_municipality": "Gaindakot",
+          "u_ward": "2",
+          "photo": null,
+          "course_details": []
+        }
+      ],
+      "country_details": null
+    }
+  ],
+  "general_country": [
+    {
+      "id": 1,
+      "country": "Australia",
+      "map": "https://iapply.techenfield.com/public/storage/superadmin/generalCountrylogo/1724854877general_country_logo.jpg",
+      "guidelines": [
+        {
+          "id": 1,
+          "Guidelines": "Research And Choose Your Course And Institution"
+        },
+        {
+          "id": 2,
+          "Guidelines": "Check The Eligibility Requirements"
+        },
+        {
+          "id": 3,
+          "Guidelines": "Gather The Required Documents"
+        },
+        {
+          "id": 4,
+          "Guidelines": "Pay The Visa Application Fee"
+        },
+        {
+          "id": 5,
+          "Guidelines": "Attend Biometrics Collection And Interview (if Required)"
+        },
+        {
+          "id": 6,
+          "Guidelines": "Wait For Visa Processing And Outcome"
+        },
+        {
+          "id": 7,
+          "Guidelines": "After You Receive Your Visa Prepare For Departure"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "country": "USA",
+      "map": "https://iapply.techenfield.com/public/storage/superadmin/generalCountrylogo/1724854883general_country_logo.jpg",
+      "guidelines": [
+        {
+          "id": 8,
+          "Guidelines": "Take The IELTS Or PTE Test"
+        },
+        {
+          "id": 9,
+          "Guidelines": "Choose The Type Of Visa"
+        },
+        {
+          "id": 10,
+          "Guidelines": "Apply To SEVP-Approved Schools"
+        },
+        {
+          "id": 11,
+          "Guidelines": "Get Accepted By A SEVP-Approved School"
+        },
+        {
+          "id": 12,
+          "Guidelines": "Receive Form I-20 Or DS-2019"
+        },
+        {
+          "id": 13,
+          "Guidelines": "Pay The SEVIS Fee"
+        },
+        {
+          "id": 14,
+          "Guidelines": "Complete The DS-160 Form"
+        },
+        {
+          "id": 15,
+          "Guidelines": "Pay The Visa Application Fee"
+        },
+        {
+          "id": 16,
+          "Guidelines": "Schedule A Visa Interview"
+        },
+        {
+          "id": 17,
+          "Guidelines": "Gather Required Documents"
+        },
+        {
+          "id": 18,
+          "Guidelines": "Attend The Visa Interview"
+        },
+        {
+          "id": 19,
+          "Guidelines": "Wait For Visa Processing"
+        },
+        {
+          "id": 20,
+          "Guidelines": "Receive Your Visa And Departure"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "country": "Uk",
+      "map": "https://iapply.techenfield.com/public/storage/superadmin/generalCountrylogo/1737542598general_country_logo.png",
+      "guidelines": []
+    },
+    {
+      "id": 4,
+      "country": "Canada",
+      "map": "https://iapply.techenfield.com/public/storage/superadmin/generalCountrylogo/1737542681general_country_logo.jpg",
+      "guidelines": []
+    }
+  ]
+}
