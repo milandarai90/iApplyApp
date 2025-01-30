@@ -11,10 +11,7 @@ class HomePageScreen extends StatefulWidget{
 class HomePageScreenState extends State<HomePageScreen>{
   int myIndex =0;
   FocusNode focusNode = FocusNode();
-  // List<Widget>WidgetList = const[
-  //   HomePageScreen(),
-  //   LoginPage(),
-  // ];
+
   @override
   void dispose(){
     focusNode.dispose();
