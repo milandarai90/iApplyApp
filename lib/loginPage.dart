@@ -137,31 +137,38 @@ class LoginPageState extends State<LoginPage> {
                                     width: 120,
                                     child: ElevatedButton(
                                       onPressed: () async {
-                                        // if (formKey.currentState!.validate()) {
-                                        //   requestModel.email = emailController.text;
-                                        //   requestModel.password = passwordController.text;
-                                        //
-                                        //   ApiServices apiServices = ApiServices();
-                                        //   LoginResponse response = await apiServices.login(requestModel);
-                                        //
-                                        //   if (response.token != null && response.token!.isNotEmpty) {
-                                        //     // Login successful, navigate to the home screen
-                                        //     Navigator.pushReplacement(
-                                        //       context,
-                                        //       MaterialPageRoute(builder: (context) => NavigationBarPage()),
-                                        //     );
-                                        //   } else {
-                                        //     // Login failed, show error message
-                                        //     ScaffoldMessenger.of(context).showSnackBar(
-                                        //       SnackBar(
-                                        //         content: Text(response.email ?? "Login successful."),
-                                        //         backgroundColor: Colors.green,
-                                        //       ),
-                                        //     );
-                                        //   }
-                                        // }
+                                        if (formKey.currentState!.validate()) {
+                                          requestModel.email = emailController.text;
+                                          requestModel.password = passwordController.text;
 
+                                          ApiServices apiServices = ApiServices();
+                                          LoginResponse response = await apiServices.login(requestModel);
+
+                                          if (response.token != null && response.token!.isNotEmpty ) {
+                                            // Show success message
+                                            ScaffoldMessenger.of(context).showSnackBar(
+                                              SnackBar(
+                                                content: Center(child: Text("Login successful.")),
+                                                backgroundColor: Colors.green,
+                                              ),
+                                            );
+
+                                            // Wait for snackbar to be seen before navigating
+                                            await Future.delayed(Duration(seconds: 2));
+
+                                            // Navigate to home screen
+                                            if (context.mounted) {
+                                              Navigator.pushReplacement(
+                                                context,
+                                                MaterialPageRoute(builder: (context) => NavigationBarPage()),
+                                              );
+                                            }
+                                          } else {
+                                        return null;
+                                          }
+                                        }
                                       }
+
 
                                       ,
                                         style: ElevatedButton.styleFrom(
