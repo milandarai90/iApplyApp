@@ -1,11 +1,11 @@
 class LoginResponse{
   final String token;
-  final String error;
+  final String email;
 
-  LoginResponse({required this.error,required this.token});
+  LoginResponse({required this.email,required this.token});
 
   factory LoginResponse.fromJson(Map<String,dynamic>json){
-    return LoginResponse(error: json["error"] != null ? json["error"]:"", token: json["token"]!= null ? json["token"]: "");
+    return LoginResponse(email: json["email"] != null ? json["email"]:"", token: json["token"]!= null ? json["token"]: "");
   }
 }
 class LoginRequest{
